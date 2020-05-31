@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongInformation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/platemain_musicinfo"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/endhorizenPlate"
+        app:layout_constraintLeft_toLeftOf="@id/startPlate"
+        app:layout_constraintRight_toRightOf="@id/endPlate"
+        app:layout_constraintTop_toTopOf="@id/starthorizenPlate">
+
+        <ImageView
+            android:id="@+id/platehide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_18sdp"
+            android:alpha="0"
+            android:background="@drawable/ic_plate_main"
+            android:transitionName="plateMainTrans"
+            app:layout_constraintBottom_toBottomOf="@id/platesub"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/platesub"
+            android:layout_width="@dimen/_86sdp"
+            android:layout_height="@dimen/_43sdp"
+            android:alpha="0"
+            android:background="@drawable/plate1"
+            android:transitionName="plateTrans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSinger" />
+
+        <ImageView
+            android:id="@+id/imgMain"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/zedd"
+            android:scaleType="centerCrop"
+            android:transitionName="imgMainTrans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNameSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CandyMan"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:transitionName="txtNameSongTrans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgMain" />
+
+        <TextView
+            android:id="@+id/txtSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="Zedd &amp; Aloe Blacc"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_12ssp"
+            android:transitionName="txtSingerTrans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtNameSong" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/controlLayout"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:orientation="horizontal"
+            android:scaleType="centerCrop"
+            android:transitionName="controlTrans"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSinger">
+
+            <ImageView
+                android:id="@+id/timeBar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:alpha="0"
+                android:background="@drawable/timebar"
+                android:transitionName="timeBarTrans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnBacks"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:background="@drawable/zdown"
+                android:transitionName="backTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:background="@drawable/play"
+                android:transitionName="playTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnBacks"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Button
+                android:id="@+id/otherButton"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="@dimen/_9sdp"
+                android:background="@drawable/others"
+                android:transitionName="otherButtonTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/btnNext"
+                app:layout_constraintStart_toStartOf="@id/btnNext"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:background="@drawable/up"
+                android:transitionName="nextTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnPlay"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnLike"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:alpha="0"
+                android:background="@drawable/p0317_iconbtn_1nrm"
+                android:transitionName="likeTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnBacks"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="0dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate1"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="@drawable/ic_plate1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomPlate1"
+        app:layout_constraintStart_toEndOf="@id/startPlate1"
+        app:layout_constraintTop_toTopOf="@id/topPlate1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startComponentPlat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endComponentPlat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.84" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomImgPlat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <TextView
+            android:id="@+id/related_info_plate1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:text="Related Artist"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/endComponentPlat1"
+            app:layout_constraintStart_toEndOf="@id/startComponentPlat1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_info_plate1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/imgplate1"
+            app:layout_constraintBottom_toTopOf="@id/bottomImgPlat1"
+            app:layout_constraintEnd_toStartOf="@id/endComponentPlat1"
+            app:layout_constraintStart_toEndOf="@id/startComponentPlat1"
+            app:layout_constraintTop_toBottomOf="@id/related_info_plate1" />
+
+        <TextView
+            android:id="@+id/name_info_plate1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="This is Zed"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/endComponentPlat1"
+            app:layout_constraintStart_toEndOf="@id/startComponentPlat1"
+            app:layout_constraintTop_toBottomOf="@id/img_info_plate1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate2"
+        android:layout_width="@dimen/_108sdp"
+        android:layout_height="@dimen/_109sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:alpha="0"
+        android:background="@drawable/ic_plate2"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/guideline006"
+        app:layout_constraintTop_toBottomOf="@id/topPlate2">
+
+        <TextView
+            android:id="@+id/related_info_plate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:text="For you"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_info_plate2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/imgplate2"
+            app:layout_constraintBottom_toTopOf="@id/name_info_plate2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/related_info_plate2" />
+
+        <TextView
+            android:id="@+id/name_info_plate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:gravity="center"
+            android:text="Live at Captal"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate3"
+        android:layout_width="@dimen/_108sdp"
+        android:layout_height="@dimen/_109sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:alpha="0"
+        android:background="@drawable/ic_plate3"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/guideline073"
+        app:layout_constraintTop_toBottomOf="@id/guideline005_horizental">
+
+        <TextView
+            android:id="@+id/related_info_plate3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:text="Music Video"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_info_plate3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@drawable/imgplate3"
+            app:layout_constraintBottom_toTopOf="@id/name_info_plate3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/related_info_plate3" />
+
+        <TextView
+            android:id="@+id/name_info_plate3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:gravity="center"
+            android:text="Live at Captal"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate4"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_66sdp"
+        android:alpha="0"
+        android:background="@drawable/ic_plate_tts"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/startPlate4"
+        app:layout_constraintTop_toBottomOf="@id/guideline094_horizental">
+
+        <TextView
+            android:id="@+id/related_info_plate4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:text="Who is..."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_info_plate4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_19sdp"
+            android:background="@drawable/ic_tts"
+            app:layout_constraintBottom_toTopOf="@id/name_info_plate4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/related_info_plate4" />
+
+        <TextView
+            android:id="@+id/name_info_plate4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:gravity="center"
+            android:text="Zedd"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/btnL"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_245sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:transitionName="phoneTrans">
+
+            <Button
+                android:id="@+id/phone"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/phone"
+                android:transitionName="phoneTrans" />
+
+            <TextView
+                android:id="@+id/phone1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/phone1"
+                android:transitionName="phone1Trans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/navi"
+                android:layout_width="@dimen/_29sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/navi"
+                android:transitionName="naviTrans" />
+
+            <TextView
+                android:id="@+id/naviText"
+                android:layout_width="@dimen/_21ssp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/navi1"
+                android:transitionName="naviTextTrans" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnR"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_245sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="@dimen/_31sdp"
+                android:layout_height="@dimen/_31sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/setting"
+                android:transitionName="settingTrans" />
+
+            <TextView
+                android:id="@+id/settingText"
+                android:layout_width="@dimen/_33sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/setting1"
+                android:transitionName="settingTextTrans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/spotify"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/spotify"
+                android:transitionName="spotifyTrans" />
+
+            <TextView
+                android:id="@+id/spotifyText"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/soptify1"
+                android:transitionName="spotifyTextTrans" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/alexa"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="@drawable/alexa"
+        android:transitionName="alexaTrans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline15" />
+
+    <TextView
+        android:id="@+id/alexaName"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:alpha="0"
+        android:background="@drawable/alexa1"
+        android:transitionName="alexa1Trans"
+        app:layout_constraintBottom_toBottomOf="@id/alexa"
+        app:layout_constraintRight_toLeftOf="@id/guideline15" />
+
+    <Button
+        android:id="@+id/sync"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="@drawable/sync"
+        android:transitionName="syncTransz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline85" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:alpha="0"
+        android:background="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline85" />
+
+    <Button
+        android:id="@+id/btnOthers"
+        android:layout_width="@dimen/_27sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="@drawable/ic_others"
+        android:alpha="0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plate" />
+
+    <TextView
+        android:id="@+id/syncText"
+        android:alpha="0"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@drawable/sync1"
+        android:transitionName="syncTextTrans"
+        app:layout_constraintBottom_toBottomOf="@id/sync"
+        app:layout_constraintLeft_toRightOf="@id/guideline85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startPlate4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline006"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline005_horizental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline094_horizental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline073"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startPlate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3515732" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/starthorizenPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomPlate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topPlate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="-0.22" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endhorizenPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topPlate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

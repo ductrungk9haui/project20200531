@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+   <!-- <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/pager"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startPlateMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endPlateMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plateMain"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:scaleType="center"
+        android:background="@drawable/shadow"
+        app:layout_constraintLeft_toRightOf="@id/startPlateMain"
+        app:layout_constraintRight_toLeftOf="@id/endPlateMain"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topPlatehide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomPlatehide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.83" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startPlatehide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endPlatehide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+        <ImageView
+            android:id="@+id/platehide"
+            android:transitionName="plateMainTrans"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_plate_main"
+            app:layout_constraintTop_toTopOf="@id/topPlatehide"
+            app:layout_constraintBottom_toBottomOf="@id/bottomPlatehide"
+            app:layout_constraintStart_toEndOf="@id/startPlatehide"
+            app:layout_constraintEnd_toStartOf="@id/endPlatehide"/>
+
+        <LinearLayout
+            android:id="@+id/info1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_103sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_31sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:id="@+id/imgMain"
+                android:layout_width="@dimen/_103sdp"
+                android:layout_height="@dimen/_103sdp"
+                android:background="@drawable/zedd"
+                android:transitionName="imgMainTrans" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNameSong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_34sdp"
+                    android:scaleType="centerCrop"
+                    android:text="@string/candyman"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="bold"
+                    android:transitionName="txtNameSongTrans" />
+
+                <TextView
+                    android:id="@+id/txtSinger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.3"
+                    android:scaleType="centerCrop"
+                    android:text="Zedd &amp; Aloe Blacc"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_15ssp"
+                    android:transitionName="txtSingerTrans" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/plate"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_190sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginRight="@dimen/_11sdp"
+        android:background="@drawable/plate1"
+        android:transitionName="plateTrans"
+        app:layout_constraintLeft_toLeftOf="@id/plateMain"
+        app:layout_constraintRight_toLeftOf="@id/btnR"
+        app:layout_constraintTop_toTopOf="@id/plateMain">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/controlLayout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_76sdp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:transitionName="controlTrans">
+
+            <ImageView
+                android:id="@+id/timeBar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/timebar"
+                android:transitionName="timeBarTrans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/guideline75"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/otherButton"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/others"
+                android:transitionName="otherButtonTrans"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="214dp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/zdown"
+                android:transitionName="backTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/play"
+                android:transitionName="playTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnBack" />
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/up"
+                android:transitionName="nextTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnLike"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnPlay" />
+
+            <Button
+                android:id="@+id/btnLike"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:background="@drawable/p0317_iconbtn_1nrm"
+                android:transitionName="likeTrans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnNext" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/btnL"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_245sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintRight_toLeftOf="@id/plateMain"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/phoneLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/phone"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/phone"
+                android:transitionName="phoneTrans" />
+
+            <TextView
+                android:id="@+id/phone1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/phone1"
+                android:transitionName="phone1Trans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/naviLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/navi"
+                android:layout_width="@dimen/_29sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/navi"
+                android:transitionName="naviTrans" />
+
+            <TextView
+                android:id="@+id/naviText"
+                android:layout_width="@dimen/_21ssp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/navi1"
+                android:transitionName="naviTextTrans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/alexa"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/alexa"
+                android:transitionName="alexaTrans" />
+
+            <ImageView
+                android:id="@+id/alexaName"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/alexa1"
+                android:transitionName="alexa1Trans" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnR"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_245sdp"
+        android:layout_marginLeft="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintLeft_toRightOf="@id/plateMain"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="@dimen/_31sdp"
+                android:layout_height="@dimen/_31sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/setting"
+                android:transitionName="settingTrans" />
+
+            <TextView
+                android:id="@+id/settingText"
+                android:layout_width="@dimen/_33sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/setting1"
+                android:transitionName="settingTextTrans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/spotify"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_29sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/spotify"
+                android:transitionName="spotifyTrans" />
+
+            <TextView
+                android:id="@+id/spotifyText"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/soptify1"
+                android:transitionName="spotifyTextTrans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/sync"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/sync"
+                android:transitionName="syncTrans" />
+
+            <TextView
+                android:id="@+id/syncText"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/sync1"
+                android:transitionName="syncTextTrans" />
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

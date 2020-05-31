@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android" android:duration="500">
+ <!--   <targets>
+        <target android:excludeId="@android:id/statusBarBackground" />
+        <target android:excludeId="@android:id/navigationBarBackground" />
+    </targets>
+    <changeClipBounds/>
+    <changeBounds android:interpolator="@anim/overshootcustom" >
+       &lt;!&ndash; <targets>
+            <target android:excludeId="@id/txtNameSong" />
+            <target android:excludeId="@id/txtSinger" />
+        </targets>&ndash;&gt;
+    </changeBounds>
+   &lt;!&ndash; <changeBounds>
+        <targets>
+            <target android:targetId="@id/txtNameSong" />
+            <target android:targetId="@id/txtSinger" />
+        </targets>
+    </changeBounds>&ndash;&gt;
+
+    \
+
+    <changeImageTransform />
+    <changeTransform />
+    <changeImageTransform />-->
+    <changeClipBounds />
+    <changeBounds android:interpolator="@anim/overshootcustom"/>
+    <changeImageTransform />
+    <changeTransform  android:interpolator="@anim/overshootcustom"/>
+</transitionSet>
